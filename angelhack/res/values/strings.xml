@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">angelhack</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_worke_profile">WorkeProfile</string>
+    <string name="title_activity_reg_select">RegSelect</string>
+    <string name="title_activity_workers_list">WorkersList</string>
+    <string name="title_activity_worker2">Worker2</string>
+    <string name="title_activity_worker3">Worker3</string>
+    <string name="title_activity_worker4">Worker4</string>
+    <string name="title_activity_worker5">Worker5</string>
+
+</resources>

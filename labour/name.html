@@ -1,0 +1,122 @@
+
+<html>
+    <head>
+	<link rel="stylesheet" href="css/leftbar.css">
+        <title>SECURITY</title>
+ <script>
+function showUser(str)
+{
+if (str=="")
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  } 
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+   if(document.getElementById('name').checked) {
+xmlhttp.open("GET","namesearch.php?q="+str,true);
+xmlhttp.send();
+
+}
+
+
+else if(document.getElementById('place').checked) {
+xmlhttp.open("GET","placesearch.php?q="+str,true);
+xmlhttp.send();
+
+ }
+
+else if(document.getElementById('type').checked) {
+xmlhttp.open("GET","typesearch.php?q="+str,true);
+xmlhttp.send();
+
+ }
+
+
+
+
+
+}
+</script>
+
+ <style>
+body{
+	background-color: ;
+	font-family: sans-serif;
+
+}
+
+
+.input
+{
+font-family: tahoma arial; 
+font-size:16px;
+font-weight: bold;
+font-style: normal;
+margin-left: 50px;
+margin-top: 20px;
+}
+
+
+#namesearch
+{
+
+	margin-left: 40px;
+	font-size: 20px;
+}
+
+#inp
+
+{
+
+	width: 200px;
+	height: 30px;
+	border-radius: 04px;
+
+	font-weight: bold;
+	font-size: 18px;
+}
+</style>
+	
+    <body>
+    	<br>	
+	<br>
+
+
+<form method="GET">
+<form>
+<br><br>
+PLACE<input type = "radio" id = "place" name = "sradio">
+NAME<input type = "radio" id = "name" name = "sradio">
+TYPE<input type = "radio" id = "type" name = "sradio">
+
+<p id="namesearch"> <i>Search By NAME</i> &nbsp&nbsp&nbsp &nbsp:
+<input id="inp"type="text" name="name" placeholder=" search here.." onkeyup="showUser(this.value)">
+</select>
+</form>
+
+<br>
+<div id="txtHint" style="margin:10px"><b>Person info will be listed here.</b></div>
+
+<br>
+
+		</div>
+	
+
+
+	</body>
+	</div>
+	</html>

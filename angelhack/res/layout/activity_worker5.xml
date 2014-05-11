@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@layout/scr_bg" >
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@layout/scr_bg"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context=".MainActivity" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="15dp"
+                android:src="@drawable/a" />
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp" 
+                android:max="5"
+                android:rating="4.2"
+                android:stepSize="0.1" 
+                android:isIndicator="true"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ratingBar1"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:orientation="vertical"
+                android:paddingTop="20dp" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ratingBar1"
+                    android:layout_alignLeft="@+id/ratingBar1"
+                    android:layout_marginTop="25dp"
+                    android:text="Employers Review"
+                    android:textColor="#E99820"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ratingBar1"
+                    android:layout_alignLeft="@+id/ratingBar1"
+                    android:layout_marginTop="15dp"
+                    android:text="&quot;    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat &quot;"
+                    android:textColor="#071871"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ratingBar1"
+                    android:layout_alignLeft="@+id/ratingBar1"
+                    android:layout_marginTop="20dp"
+                    android:text="&quot;    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui &quot;"
+                    android:textColor="#071871"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ratingBar1"
+                    android:layout_alignLeft="@+id/ratingBar1"
+                    android:layout_marginTop="15dp"
+                    android:text="&quot;    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat &quot;"
+                    android:textColor="#071871"
+                    android:textStyle="italic" />
+                      <Button
+                android:id="@+id/button1"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="#3366CC"
+                android:text="Hire Me"
+             
+                android:textColor="#fff" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Girish"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#333"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_centerHorizontal="true"
+                android:text="House Keeper"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#E99820"
+                android:textStyle="bold" />
+      
+        </RelativeLayout>
+    </ScrollView>
+
+   
+
+</RelativeLayout>

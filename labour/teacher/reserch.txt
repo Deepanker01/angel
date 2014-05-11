@@ -1,0 +1,172 @@
+HELICAL TRANSFORMATION
+
+The Helical transform is a function from boolean vector to boolean vector. For a 1 to appear in the result of the Helical transform, the number of corresponding positions in which there is a 1 in both the input vector and a column of the transform matrix must be odd. Each 1 in the result selects a particular boolean basis function, each basis function being one of the rows of Langlet’s Gv matrix (a variant of the Sierpinski triangle). The modulo-2 sum of all the selected basis functions exactly reproduces the original input vector. Because the Helical transform is performed in the boolean field, any of the possible basis functions is either selected or not selected—unlike, e.g., the FFT or Walsh transform, in which each function has a real coefficient.
+
+The Helical transform of a boolean vector can be computed in at least three different ways:
+
+1.	forming the “pariton” of the boolean vector and then extracting the main anti-diagonal
+2.	multiplying the boolean vector by Langlet’s Gv matrix 
+3.	using the “fanion” method described by Zaus (the most efficient method) 
+
+As Langlet showed , the two-dimensional Helical transform can be obtained with a single application of the Helical transform. The matrix to be analyzed is raveled into a vector, which becomes the argument to the Helical transform. The vector result is then reshaped to the dimensions of the input matrix. 
+Because the Helical transform is its own inverse, any boolean vector or matrix can be exactly reconstructed simply by applying the Helical transform to its own result:
+hel( hel( V ) ) = V
+hel2( hel2( M ) ) = M
+Each 1 in the result of the 1D Helical transform represents a basis vector. The sum of all the basis vectors exactly reproduces the original matrix. If V1, V2,…,Vn is the set of basis vectors of some arbitrary boolean vector, the following relationship holds:
+hel2( V1   V2  , …,  Vn ) =  hel2( V1 )  hel2( V2 )  ,…,   hel2( Vn )
+(“ ” denotes element-wise exclusive-OR. The required operation can also be accomplished with element-wise addition modulo-2). 
+Each 1 in the result of the 2D Helical transform represents a basis matrix. The sum of all the basis matrices exactly reproduces the original matrix. If M1, M2,…,Mn is the set of basis matrices of some arbitrary square boolean matrix, the following relationship holds:
+hel2( M1   M2  , …,  Mn ) =  hel2( M1 )   hel2( M2 )  ,…,   hel2( Mn )
+In both cases, the transform of the sum is equal to the sum of the transforms.
+If it is desired to see the basis vector or matrix corresponding to a particular 1 in the transform, it is necessary only to create an all-zeroes vector or matrix of the same dimensions as the object being analyzed, set the appropriate cell to 1, and apply the Helical transform. The result will be the desired basis vector or matrix.
+ 
+
+
+
+
+
+
+1.1 Security trends
+A security attack can be viewed as access to a confidential data. An attack can be occurred with the intention of reading the data or modifying the data. This report made a general consensus that the Internet needs more and better security, and it identified key areas for security mechanisms. Among these were the need to control of network traffic, the need to secure end to end user traffic using authentication, secure the network infrastructure from unauthorized monitoring and encryption mechanisms [1]. With the emergence of information technology, the attacks on the Internet and Internet-attached systems have grown more sophisticated and drastically while the amount of expertise and awareness needed to undertake an attack has declined. Critical infrastructures gradually more rely on the Internet for operations. Individual users rely on the security of the Internet, email, the Web, and Web-based applications to a greater extent than ever. Thus, a wide range of technologies and tools are needed to counter the growing threat. The OSI security architecture focuses on security attacks, mechanisms, and services. These can be defined briefly as follows:
+1.1.1 Passive Attack
+A passive attack on a cryptosystem is one in which the cryptanalyst cannot interact with any of the parties involved, attempting to break the system solely based upon observed data (i.e. the cipher text). In this type of attack, the main aim of the opponents is to obtain the information. It means they never harm the recourses or modify the information, they just read the information. It is very hard to detect this type of attack because passive attacks cannot be sensed by the decrypted message. There are two types of passive attacks, release of message content and traffic analysis.
+1.1.2 Active Attack
+Active attacks are used to modify the encrypted information or the creation of false stream which can change the meaning of the decrypted message. Four types of active attack are these: Masquerade, Replay, Modification of the messages, and Denial of service.
+It uses two keys; public key and private key, sender encrypts the message by using the public key of receiver and receiver decrypt the message by using his private key. So there is no need of key transfer, which increases its security. In this technique both parties have their set of key, public key and private key. Public key is public to all in the network can be access by everyone while private key is private to its owner. 
+
+
+
+1. Encrypting a given text file :
+Here we convert a given file with human readable text into a secret code with the help of secret key that is known only to sender & receiver.
+2. Decrypting a given encrypted file
+Here we convert a given encrypted file into a human readable text file with the help of same secret key as used by sender to encrypt that file.
+3. Attacking an encrypted file
+Here we check the possibility of all key combinations as the actual key is not known. We apply each combination on the secret code to break it.
+
+
+Literature survey
+
+1.Image Encryption Using Block-Based Transformation
+Algorithm.
+Mohammad Ali Bani Younes and Aman introduce a
+block-based transformation algorithm based on the
+combination of image transformation and a well-known
+encryption and decryption algorithm called Blowfish. The
+original image was divided into blocks, and using the
+transformation algorithm it was rearranged, and then the
+Blowfish algorithm is used for encrypting the transformed
+image their results showed that the correlation between
+image elements was significantly decreased. Their results
+also show that increasing the number of blocks by using
+smaller block sizes resulted in a lower correlation and
+higher entropy.
+
+
+An Image Encryption Approach Using a Combination
+of Permutation Technique Followed by Encryption.
+Mohammad Ali Bani Younes and Aman Jantan [15]
+introduce a new permutation technique based on the
+combination of image permutation and a well known
+encryption algorithm called RijnDael. The original image
+was divided into 4 pixels × 4 pixels blocks, which were
+rearranged into a permuted image using a permutation
+process, and then the generated image was encrypted using
+the RijnDael algorithm. Their results showed that the
+correlation between image elements was significantly
+decreased by using the combination technique and higher
+entropy was achieved.
+
+Technique for Image Encryption using chaos
+technique.
+
+-Guosheng Gu and Guoqiang Han made a new highly
+optimised image algorithm using permutation and
+substitution methods. It was done in order to enhance the
+pseudorandom characteristics of chaotic sequences, an
+optimized treatment and a cross-sampling disposal is used.
+
+-Huang-PeiXiao , Guo-ji Zan made an algorithm using
+two chaotic systems . One chaotic system generates a
+chaotic sequence, which was changed into a binary stream
+using a threshold function. The other chaotic system was
+used to construct a permutation matrix. . Firstly, using the
+binary stream as a key stream, randomly the pixel values of
+the images was modified. Then, the modified image was
+encrypted again by permutation matrix.
+
+
+Lossless Image Compression and Encryption Using
+SCAN.
+S.S. Maniccam and N.G. Bourbakis [4] have presented a
+new algorithm which does two works: lossless compression
+and encryption of binary and gray-scale pictures. The
+compression and encryption schemes are based on SCAN
+patterns generated by the SCAN methodology. The SCAN
+is formal language-based 2D spatial-accessing
+methodologies generate a wide range of scanning paths or
+space filling curves.
+
+
+New Encryption Algorithm for Image Cryptosystems.
+
+
+Chin-Chen Chang, Min-Shian Hwang, and Tung-Shou
+Chen [6] used vector quantization for designing better
+cryptosystem for images. The scheme was based on vector
+quantization (VQ), cryptography, and various others
+number theorem. In vector quantization (VQ) firstly the
+images are decomposed into vectors and then sequentially
+encoded vector by vector. . Then traditional cryptosystems
+from commercial applications can be used.
+
+
+ Technique for Image Encryption using Digital
+Signatures.
+
+
+Aloka Sinha and Kehar Singh have proposed a new
+technique in which the digital signature of the original
+image is added to the encoded version of the original
+image. A best suitable error code is followed to do
+encoding of the image, ex: Bose-Chaudhuri
+Hochquenghem (BCH) code. At the receiver end, after
+decryption of that image, the digital signature verifies the
+authenticity of the image.
+
+
+
+Image Encryption Based on Bit-plane Decomposition
+and Random Scrambling
+
+
+Qiudong Sun, Wenying Yan, Jiangwei Huang, Wenxin Ma
+general random scrambling method was designed
+which has more stable scrambling degree than the classical
+method Arnold transform. At first, they decomposed a gray
+image into several bit-plane images. Then we shuffled them
+by a random scrambling algorithm separately. Lastly, we
+merged the scrambled bit-plane images according to their
+original levels on bit-planes and gained an encrypted
+image. Due to each bit-plane image is scrambled by using
+different scrambling random sequences, the bits located at
+the same coordinates in different bit-planes are almost not
+stay on the original positions when each bit-plane being
+scrambled separately. For each pixel, its all bits of gray
+level, therefore, may be come from those pixels located
+different positions. Consequently, the reconstructed gray
+levels of image are changed ineluctable. It is obvious that
+our method can do both positions exchange scrambling and
+gray level change scrambling at the same time.
+
+
+Image Encryption Based on the General Approach for
+Multiple Chaotic Systems.
+
+
+Qais H. Alsafasfeh and Aouda A. Arfoa proposed new
+image encryption technique based on new chaotic system
+by adding two chaotic systems: the Lorenz chaotic system
+and the Rossler chaotic system. From Experimental
+analysis they demonstrate that the image encryption
+algorithm has the advantages of large key space and highlevel
+security, high obscure level and high speed.
